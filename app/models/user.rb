@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :reservations, dependent: :destroy
   has_many :cars, dependent: :destroy
 
-  validates :name, presence: true, length: { maximum: 20 }
+  validates :name, presence: true, length: { maximum: 30 }
 
   def jwt_payload
     super.merge('foo' => 'bar')
